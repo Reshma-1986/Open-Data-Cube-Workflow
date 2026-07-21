@@ -1,0 +1,152 @@
+description: Sentinel-2a and Sentinel-2b imagery, processed to Level 2A (Surface Reflectance)
+    and converted to Cloud Optimized GeoTIFFs
+measurements:
+-   aliases:
+    - band_01
+    - B01
+    - coastal_aerosol
+    dtype: uint16
+    name: coastal
+    nodata: 0
+    units: '1'
+-   aliases:
+    - band_02
+    - B02
+    dtype: uint16
+    name: blue
+    nodata: 0
+    units: '1'
+-   aliases:
+    - band_03
+    - B03
+    - green
+    dtype: uint16
+    name: green
+    nodata: 0
+    units: '1'
+-   aliases:
+    - band_04
+    - B04
+    - red
+    dtype: uint16
+    name: red
+    nodata: 0
+    units: '1'
+-   aliases:
+    - band_05
+    - B05
+    - red_edge_1
+    dtype: uint16
+    name: rededge1
+    nodata: 0
+    units: '1'
+-   aliases:
+    - band_06
+    - B06
+    - red_edge_2
+    dtype: uint16
+    name: rededge2
+    nodata: 0
+    units: '1'
+-   aliases:
+    - band_07
+    - B07
+    - red_edge_3
+    dtype: uint16
+    name: rededge3
+    nodata: 0
+    units: '1'
+-   aliases:
+    - band_08
+    - B08
+    - nir
+    - nir_1
+    dtype: uint16
+    name: nir
+    nodata: 0
+    units: '1'
+-   aliases:
+    - band_8a
+    - B8A
+    - nir_narrow
+    - nir_2
+    dtype: uint16
+    name: nir08
+    nodata: 0
+    units: '1'
+-   aliases:
+    - band_09
+    - B09
+    - water_vapour
+    dtype: uint16
+    name: nir09
+    nodata: 0
+    units: '1'
+-   aliases:
+    - band_11
+    - B11
+    - swir_1
+    - swir_16
+    dtype: uint16
+    name: swir16
+    nodata: 0
+    units: '1'
+-   aliases:
+    - band_12
+    - B12
+    - swir_2
+    - swir_22
+    dtype: uint16
+    name: swir22
+    nodata: 0
+    units: '1'
+-   aliases:
+    - mask
+    - SCL
+    - qa
+    dtype: uint8
+    flags_definition:
+        qa:
+            bits:
+            - 0
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            description: Sen2Cor Scene Classification
+            values:
+                '0': no data
+                '1': saturated or defective
+                '10': thin cirrus
+                '11': snow or ice
+                '2': dark area pixels
+                '3': cloud shadows
+                '4': vegetation
+                '5': bare soils
+                '6': water
+                '7': unclassified
+                '8': cloud medium probability
+                '9': cloud high probability
+    name: scl
+    nodata: 0
+    units: '1'
+-   aliases:
+    - aerosol_optical_thickness
+    - AOT
+    dtype: uint16
+    name: aot
+    nodata: 0
+    units: '1'
+-   aliases:
+    - scene_average_water_vapour
+    - WVP
+    dtype: uint16
+    name: wvp
+    nodata: 0
+    units: '1'
+metadata: {}
+metadata_type: eo3
+name: sentinel_2_l2a
