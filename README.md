@@ -17,7 +17,7 @@ This repository documents the process of building a local Open Data Cube (ODC) e
 ![Sentinel-2 dataset indexing](images/indexing.png)
 
 **Datacube Explorer — sentinel_2_l2a collection summary**
-![Datacube Explorer dashboard](images/explorer_dashboard.png)
+![Datacube Explorer dashboard](https://github.com/Reshma-1986/Open-Data-Cube-Workflow/blob/main/images/Kerala_datacube_dashboard.png)
 
 **Sentinel-2 imagery served via WMS, rendered in QGIS**
 ![WMS output in QGIS](images/wms_qgis.png)
