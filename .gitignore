@@ -17,3 +17,4 @@ conda-env/
 
 # OS
 .DS_Store
+configs/datacube.conf
