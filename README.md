@@ -2,39 +2,43 @@
 
 ## Overview
 
-This repository documents my experience building a local Open Data Cube (ODC) environment for Earth Observation data analysis using open-source geospatial technologies.
-
-The project focuses on deploying and configuring a local ODC instance, indexing Sentinel-2 Level-2A datasets, and performing analysis using Python and Jupyter notebooks. Rather than being a copy of the Open Data Cube source code, this repository documents the workflow, configuration, and lessons learned while building and using a local data cube.
+This repository documents the process of building a local Open Data Cube (ODC) environment for Earth Observation data analysis over the Kerala region, using open-source geospatial technologies. Rather than being a copy of the Open Data Cube source code, it captures the workflow, configuration, and lessons learned while setting up and running a local data cube — including OGC web service (WMS/WMTS/WCS) configuration via `datacube-ows`.
 
 ## Project Highlights
 
 - Built and configured a local Open Data Cube environment on Linux (WSL)
-- Registered Sentinel-2 Level-2A products
-- Indexed **770 Sentinel-2 datasets**
+- Indexed Sentinel-2 Level-2A COG data (7,772 datasets, ~64,965 km², EPSG:32643) from the Element 84 `sentinel-s2-l2a-cogs` AWS S3 bucket, using a parallelized bulk-indexing script (GNU parallel)
+- Configured `datacube-ows` to serve the indexed data via WMS, WMTS, and WCS
 - Configured and used Datacube Explorer
-- Developed analysis workflows using Python and Jupyter Notebooks
-- Worked entirely with open-source geospatial technologies
+
+## Screenshots
+
+**Bulk indexing with GNU parallel**
+![Sentinel-2 dataset indexing](images/indexing.png)
+
+**Datacube Explorer — sentinel_2_l2a collection summary**
+![Datacube Explorer dashboard](images/explorer_dashboard.png)
+
+**Sentinel-2 imagery served via WMS, rendered in QGIS**
+![WMS output in QGIS](images/wms_qgis.png)
 
 ## Technologies
 
 - Open Data Cube
+- datacube-ows
 - Python
+- Dask
 - PostgreSQL
 - Linux (WSL)
+- GNU parallel
 - Jupyter Notebook
 - GDAL
 - Cloud Optimized GeoTIFF (COG)
 
-## Repository Structure
-
-```
-docs/
-notebooks/
-configs/
-images/
-```
-
 ## Status
 
-🚧 This repository is currently being documented and organized.
-Additional notebooks, configuration files, and workflow documentation will be added progressively.
+🚧 This repository is actively being documented and organized. Notebooks and additional workflow documentation will be added progressively.
+
+## Setup
+
+For details on the local environment configuration (conda environment, datacube-ows setup, environment variables), see [setup_notes.md](setup_notes.md).
