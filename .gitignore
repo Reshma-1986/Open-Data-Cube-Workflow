@@ -18,3 +18,5 @@ conda-env/
 # OS
 .DS_Store
 configs/datacube.conf
+data/senitnel_grid.kml
+data/senitnel_grid.kml
