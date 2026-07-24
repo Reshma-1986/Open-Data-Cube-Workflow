@@ -1,4 +1,4 @@
-# Kerala Open Data Cube
+# Keralam Open Data Cube
 
 ## Overview
 
