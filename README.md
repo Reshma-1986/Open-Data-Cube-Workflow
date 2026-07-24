@@ -41,4 +41,4 @@ This repository documents the process of building a local Open Data Cube (ODC) e
 
 ## Setup
 
-For details on the local environment configuration (conda environment, datacube-ows setup, environment variables), see [setup_notes.md](setup_notes.md).
+For details on the local environment configuration (conda environment, datacube-ows setup, environment variables), see [setup_notes.md](setup_note.md).
